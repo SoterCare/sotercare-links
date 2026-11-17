@@ -1,6 +1,6 @@
-# links-sotercare
+# sotercare-links
 
-A Next.js site for SoterCare's links.
+A Next.js site for SoterCare's links, deployed at **links.sotercare.com**. The repo was renamed from `links-sotercare`.
 
 ---
 
