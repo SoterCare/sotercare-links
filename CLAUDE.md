@@ -18,7 +18,7 @@ The link page for **links.sotercare.com**: Next.js 16, React 19, lucide-react, V
 
 ## How the SoterCare B2B platform fits together
 
-**Plan:** `D:\SoterCare\Github-B2B\b2b-plan\` (v2: docs 01–21, one topic per file).
+**Plan:** `D:\SoterCare\Github-B2B\b2b-plan\` (v2: docs 01–22, one topic per file; 22 = design system, tokens in `sotercare-contracts/design/`).
 - Start with `README.md`, `01-Product-and-Scope.md` and `02-System-Architecture.md`.
 - Which docs this repo needs: `16-Repos-and-Ownership.md` §3.
 - `D-xx` / `O-x` refer to `19-Decisions-and-Open-Items.md`, the decision log. **When docs disagree, 19 wins.**
@@ -43,7 +43,7 @@ backend ── REST + Socket.IO ──► sotercare-console (facility), sotercar
 backend ── medication records, dose rounds, marks, MAR (21; not alerts, never via the gateway) ──► console, mobile
 backend ── SNS → APNs / FCM push (alerts; medication round reminders) ──► sotercare-mobile
 backend ── REST /v1/ops ──► sotercare-ops-console (SoterCare staff)
-backend ── outbox → SQS events, S3 Parquet, internal API (medication: counts only) ──► sotercare-agents (agents + ARIA)
+backend ── outbox → SQS events, S3 Parquet, internal API (medication: counts only) ──► sotercare-agents (agents + ARIA; GitHub `sotercare-iit`, D-125)
 sotercare-contracts ── schemas + generated types; SerenEdge hub (b2b-plan) ──► firmware, gateway, backend, agents, consoles, mobile
 sotercare-infra ── provisions AWS + per-tenant resources ──► all cloud parts
 sotercare-studio ── records ──► sotercare-iot-dataset (data + model training) ── gait model ──► gateway
