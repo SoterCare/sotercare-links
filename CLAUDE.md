@@ -33,7 +33,7 @@ The link page for **links.sotercare.com**: Next.js 16, React 19, lucide-react, V
 - Every other project links the hub's knowledge base (and the projects it talks to), instead of copying plan text.
 
 ```
-sotercare-pcb-designs ── Rev A board (Rev B = pilot band, D-102) ──► sotercare-firmware (thigh band)
+sotercare-pcb ── Rev A board (Rev B = pilot band, D-102) ──► sotercare-firmware (thigh band)
 band ── UDP + AES-CCM over facility Wi-Fi (06) ──► sotercare-edge-gateway (= nurse station, 1 per home)
 staff phones ◄── local MQTT over WSS (alerts, claims, presence) ── gateway
 gateway ── MQTT/TLS to AWS IoT Core → SQS (Wi-Fi or LTE) ──► sotercare-backend
